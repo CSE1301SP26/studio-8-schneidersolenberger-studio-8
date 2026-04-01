@@ -3,7 +3,9 @@ package studio8;
 import support.cse131.NotYetImplementedException;
 
 public class Question {
-	
+	private String prompt;
+	private String answer;
+	private int points;
 	/**
 	 * Constructor
 	 * @param prompt
@@ -11,7 +13,10 @@ public class Question {
 	 * @param points
 	 */
 	public Question(String prompt, String answer, int points) {
-		throw new NotYetImplementedException();
+		this.prompt = prompt;
+		this.answer = answer;
+		this.points = 0;
+		
 	}
 	
 	/**
@@ -20,6 +25,7 @@ public class Question {
 	 */
 	public void displayPrompt() {
 		System.out.println(this.prompt + "(" + this.points + " points)");
+		return;
 	}
 	
 	/**
@@ -40,7 +46,7 @@ public class Question {
 	 * @return int points
 	 */
 	public int getPoints() {
-		throw new NotYetImplementedException();
+		return points;
 	}
 	
 	/**
@@ -48,10 +54,11 @@ public class Question {
 	 * @return String answer
 	 */
 	public String getAnswer() {
-		throw new NotYetImplementedException();
+		return answer;
 	}
 	
 	public static void main(String[] args) {
-		// TODO: Create a Question object of your own!
+		Question sample = new Question ("What is 2+2?", "4", 0);
+		return;
 	}
 }
